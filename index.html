@@ -1,138 +1,175 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ville-Propre – Nettoyons Alès ensemble</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    body { font-family: Arial, sans-serif; background: #f0f4f3; color: #333; margin:0; padding:0; scroll-behavior: smooth; }
-    
-    /* MENU FIXE */
-    nav {
-      position: fixed;
-      top:0;
-      width:100%;
-      background: #2d8a34;
-      display:flex;
-      justify-content:center;
-      z-index: 1000;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    }
-    nav a {
-      color:white;
-      text-decoration:none;
-      padding:15px 20px;
-      display:inline-block;
-      font-weight:bold;
-      transition: background 0.3s;
-    }
-    nav a:hover { background: #23912d; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ville Propre - Association Citoyenne</title>
 
-    header {
-      background: linear-gradient(135deg, #2d8a34, #6dd47e);
-      color: white;
-      text-align: center;
-      padding: 100px 20px 60px 20px; /* top padding plus menu fixe */
-    }
-    header h1 { font-size: 3em; margin-bottom: 10px; opacity:0; transform: translateY(-20px); animation: fadeIn 1s forwards 0.2s; }
-    header p { font-size: 1.3em; opacity:0; transform: translateY(-20px); animation: fadeIn 1s forwards 0.5s; }
-    a.btn {
-      display: inline-block;
-      background: #ffcc00;
-      color: #2d8a34;
-      padding: 14px 28px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    a.btn:hover {
-      background: #e6b800;
-      transform: scale(1.1);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #222;
+        }
 
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px 20px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-    }
-    section h2 { margin-bottom: 20px; color: #2d8a34; display:flex; align-items:center; }
-    section h2 i { margin-right:10px; color:#6dd47e; }
-    section p { margin-bottom: 15px; line-height:1.6; }
-    img { display:block; margin:20px auto; max-width:450px; border-radius:15px; transition: transform 0.4s, box-shadow 0.4s; }
-    img:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        header {
+            background: #2ecc71;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-    footer { background: #2d8a34; color: white; text-align: center; padding: 25px; margin-top: 40px; }
+        nav {
+            background: #27ae60;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
 
-    @media(max-width: 600px) { header h1 { font-size: 2em; } }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
-    @keyframes fadeIn { to { opacity:1; transform: translateY(0); } }
-  </style>
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #27ae60;
+            border-left: 5px solid #27ae60;
+            padding-left: 10px;
+        }
+
+        .photos {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .photos img {
+            width: 420px;
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            transition: transform .3s;
+        }
+
+        .photos img:hover {
+            transform: scale(1.05);
+        }
+
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        form button {
+            margin-top: 15px;
+            background: #27ae60;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #1e8449;
+        }
+
+        footer {
+            background: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- MENU FIXE -->
-  <nav>
+<header>
+    <h1>Ville Propre</h1>
+    <p>Association citoyenne pour nettoyer et embellir nos villes.</p>
+</header>
+
+<nav>
     <a href="#mission">Notre mission</a>
-    <a href="#images">Bénévoles & Nettoyage</a>
-    <a href="#join">Nous rejoindre</a>
-  </nav>
+    <a href="#photos">Photos</a>
+    <a href="#participer">Je veux participer</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-  <!-- HEADER -->
-  <header>
-    <h1><i class="fas fa-leaf"></i> Ville-Propre</h1>
-    <p>Ensemble, rendons Alès plus propre et plus belle ! 🌱</p>
-    <a href="mailto:villepropre@contact.fr" class="btn"><i class="fas fa-hand-holding-heart"></i> Je veux participer</a>
-  </header>
+<section id="mission">
+    <h2>Notre mission</h2>
+    <p>
+        Ville Propre est une initiative citoyenne créée pour nettoyer et embellir les rues,
+        parcs et quartiers d’Alès. Nous organisons régulièrement des actions de ramassage
+        et sensibilisons les habitants à la protection de l'environnement.
+    </p>
+</section>
 
-  <!-- NOTRE MISSION -->
-  <section id="mission" class="reveal">
-    <h2><i class="fas fa-bullseye"></i> Notre mission</h2>
-    <p>Ville-Propre est une initiative citoyenne visant à nettoyer, embellir et protéger les rues, parcs et quartiers d’Alès. Ensemble, nous organisons des sorties régulières pour ramasser les déchets et sensibiliser les habitants.</p>
-  </section>
+<section id="photos">
+    <h2>Nos actions en images</h2>
+    <div class="photos">
+        <img src="benevoles-nettoyage.jpg" alt="Benevoles en action">
+        <img src="nettoyage-des-rues.jpg" alt="Nettoyage des rues">
+    </div>
+</section>
 
-  <!-- IMAGES BÉNÉVOLES ET NETTOYAGE -->
-  <section id="images" class="reveal">
-    <h2><i class="fas fa-camera"></i> Bénévoles & Nettoyage</h2>
-    <img src="nettoyage-des-rues.jpg" alt="Nettoyage des rues">
-    <img src="benevoles-nettoyage.jpg" alt="Benevoles nettoyage">
-    <p>Prochainement : dates des actions et moments forts de nos bénévoles.</p>
-  </section>
+<section id="participer">
+    <h2>Je veux participer</h2>
+    <p>Remplis simplement ce petit formulaire et nous te contacterons rapidement :</p>
 
-  <!-- NOUS REJOINDRE -->
-  <section id="join" class="reveal">
-    <h2><i class="fas fa-users"></i> Nous rejoindre</h2>
-    <p>Tu veux participer ? Seul(e), en famille ou avec des amis, tout le monde est le/la bienvenu(e) !</p>
-    <a href="mailto:villepropre@contact.fr" class="btn"><i class="fas fa-envelope"></i> Contacte-nous</a>
-  </section>
+    <form action="https://formspree.io/f/xrbnavrz" method="POST">
+        <input type="text" name="name" placeholder="Ton nom" required>
+        <input type="email" name="email" placeholder="Ton e-mail" required>
+        <textarea name="message" placeholder="Pourquoi veux-tu participer ?" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Ville-Propre – Alès | Tous droits réservés
-  </footer>
+<section id="contact">
+    <h2>Nous contacter</h2>
+    <p>Une question ? Une idée ? Clique ici :</p>
+    <a class="btn" href="mailto:villepropre@contact.fr">Envoyer un e-mail</a>
+</section>
 
-  <script>
-    // Fade-in scroll pour les sections
-    const sections = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-    sections.forEach(section => observer.observe(section));
-  </script>
+<footer>
+    © 2025 – Ville Propre – Association citoyenne
+</footer>
 
 </body>
 </html>
