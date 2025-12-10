@@ -1,1 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ville Propre</title>
+    <meta name="description" content="Contactez l'équipe de Ville Propre pour toute question, proposition ou pour organiser une action dans votre quartier.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-leaf"></i>
+                    Ville Propre
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">Qui sommes-nous</a></li>
+                    <li><a href="events.html">Agenda</a></li>
+                    <li><a href="join.html">Participer</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="support.html">Soutenir</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Une question ? Une idée ? Une envie d'agir ? Nous sommes à votre écoute et vous répondons sous 48h maximum.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+        <div class="container">
+            <div class="contact-container">
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <h2>Nos coordonnées</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adresse</h4>
+                            <p>Maison des Associations<br>15 rue du Progrès<br>75000 Ville Propre</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>contact@ville-propre.org</p>
+                            <p style="font-size: 0.9rem; color: var(--gris); margin-top: 5px;">Pour les demandes générales</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p>06 12 34 56 78 (Lucas)</p>
+                            <p style="font-size: 0.9rem; color: var(--gris); margin-top: 5px;">Pour les urgences liées aux actions en cours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Permanence téléphonique</h4>
+                            <p>Mercredi 18h-20h</p>
+                            <p style="font-size: 0.9rem; color: var(--gris); margin-top: 5px;">Pour échanger directement avec nous</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 40px;">
+                        <h4>Réseaux sociaux</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulaire de contact -->
+                <div class="contact-form-container">
+                    <h2>Envoyez-nous un message</h2>
+                    <p>Nous répondons à tous les messages dans les 48h ouvrables.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telephone">Téléphone</label>
+                                <input type="tel" id="telephone" name="telephone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="sujet">Sujet *</label>
+                            <select id="sujet" name="sujet" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="participation">Je veux participer à une action</option>
+                                <option value="groupe">Je veux créer un groupe dans mon quartier</option>
+                                <option value="partenariat">Partenariat (entreprise, école, association)</option>
+                                <option value="presse">Demande presse / interview</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fichier">Pièce jointe (optionnel)</label>
+                            <input type="file" id="fichier" name="fichier">
+                            <p style="font-size: 0.9rem; color: var(--gris); margin-top: 5px;">Formats acceptés : PDF, JPG, PNG (max. 5 Mo)</p>
+                        </div>
+                        
+                        <div style="margin-top: 30px;">
+                            <button type="submit" class="btn btn-principal">Envoyer mon message</button>
+                        </div>
+                        
+                        <p style="font-size: 0.9rem; color: var(--gris); margin-top: 20px;">
+                            * Champs obligatoires. Vos données sont traitées conformément à notre 
+                            <a href="#">politique de confidentialité</a>.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Contact -->
+    <section class="section-grise">
+        <div class="container">
+            <h2>Questions fréquentes</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Je veux organiser une action avec mon entreprise/école ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Parfait ! Utilisez le sujet "Partenariat" dans le formulaire et précisez votre structure. Nous organisons régulièrement des actions dédiées aux groupes et adaptons le format à vos besoins (team building, projet pédagogique, etc.).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Un dépôt sauvage est réapparu après nettoyage ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Signalez-le nous avec photos et localisation précise (adresse exacte ou coordonnées GPS). Nous avons un protocole avec la mairie pour un nettoyage rapide et, si possible, pour identifier l'origine du dépôt.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Puis-je récupérer du matériel pour nettoyer seul ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui ! Nous prêtons des kits individuels (gants, sac, pince) sur demande. Précisez-le dans votre message avec vos disponibilités pour venir récupérer le matériel à notre local.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Comment devenir bénévole régulier ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Commencez par participer à une ou deux actions pour découvrir le mouvement. Ensuite, vous pourrez vous impliquer davantage selon vos disponibilités et compétences (organisation, communication, logistique...).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Les actions sont-elles annulées en cas de mauvais temps ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les actions sont maintenues sauf conditions météorologiques dangereuses (orage, tempête, canicule). En cas de pluie, nous adaptons l'équipement. Nous prévenons toujours les participants par email la veille si un report est nécessaire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte (simulée) -->
+    <section>
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2>Notre local</h2>
+                <p>Nous sommes basés à la Maison des Associations, un lieu dédié aux initiatives citoyennes comme la nôtre.</p>
+                
+                <div style="margin-top: 30px; padding: 30px; background-color: var(--beige); border-radius: 10px;">
+                    <div style="height: 300px; background-color: #ddd; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: var(--gris); margin-bottom: 20px;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-right: 15px;"></i>
+                        <div style="text-align: left;">
+                            <h4>Carte interactive</h4>
+                            <p>Notre local à la Maison des Associations</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                        <div style="text-align: center;">
+                            <i class="fas fa-bus" style="color: var(--vert-principal); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                            <p><strong>Transport</strong><br>Bus L1, L3, L5<br>Arrêt "Maison des Associations"</p>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <i class="fas fa-bicycle" style="color: var(--vert-principal); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                            <p><strong>Vélo</strong><br>Station Vélib' n°45<br>Devant l'entrée</p>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <i class="fas fa-car" style="color: var(--vert-principal); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                            <p><strong>Voiture</strong><br>Parking gratuit<br>50 places disponibles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ville Propre</h3>
+                    <p>Redonnons à notre environnement sa beauté originelle. Rejoignez le mouvement citoyen pour des quartiers plus propres et plus solidaires.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes-nous</a></li>
+                        <li><a href="events.html">Agenda des actions</a></li>
+                        <li><a href="join.html">Comment participer</a></li>
+                        <li><a href="impact.html">Notre impact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> contact@ville-propre.org</li>
+                        <li><i class="fas fa-phone"></i> 06 12 34 56 78</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Maison des Associations, 75000</li>
+                        <li><a href="contact.html">Formulaire de contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="current-year">2024</span> Ville Propre. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
