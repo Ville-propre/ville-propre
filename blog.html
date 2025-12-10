@@ -233,4 +233,36 @@
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> contact@ville
+                        <li><i class="fas fa-envelope"></i> contact@ville-propre.org</li>
+                        <li><i class="fas fa-phone"></i> 06 12 34 56 78</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Maison des Associations, 75000</li>
+                        <li><a href="contact.html">Formulaire de contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="current-year">2024</span> Ville Propre. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Newsletter spécifique au blog
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterForm = document.getElementById('newsletterFormBlog');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    
+                    // Simulation d'envoi
+                    alert(`Merci ! Vous êtes maintenant abonné à notre newsletter blog. Un email de confirmation a été envoyé à ${email}.`);
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
